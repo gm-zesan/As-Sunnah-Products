@@ -29,16 +29,16 @@ use App\Http\Controllers\AdminOrderController;
 
 
 Route::get('/', [MyCommerceController::class, 'index'])->name('home');
+Route::get('/all-products', [MyCommerceController::class, 'allProducts'])->name('all-products');
 Route::get('/product-category/{id}', [MyCommerceController::class, 'category'])->name('product-category');
+Route::get('/product-sub-category/{id}', [MyCommerceController::class, 'subCategory'])->name('product-sub-category');
 Route::get('/product-detail/{id}', [MyCommerceController::class, 'detail'])->name('product-detail');
-
 
 
 Route::post('/add-to-cart/{id}', [CartController::class, 'index'])->name('add-to-cart');
 Route::get('/show-cart', [CartController::class, 'show'])->name('show-cart');
 Route::post('/update-cart-product/{id}', [CartController::class, 'update'])->name('update-cart-product');
 Route::get('/remove-cart-product/{id}', [CartController::class, 'remove'])->name('remove-cart-product');
-
 
 
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');

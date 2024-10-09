@@ -1,45 +1,16 @@
 
     <footer class="footer">
-
-        <div class="footer-top">
-            <div class="container">
-                <div class="inner-content">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4 col-12">
-                            <div class="footer-logo">
-                                <a href="index.html">
-                                    <img src="{{ asset('/website') }}/assets/images/logo/white-logo.svg" alt="#">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-9 col-md-8 col-12">
-                            <div class="footer-newsletter">
-                                <h4 class="title">
-                                    Subscribe to our Newsletter
-                                    <span>Get all the latest information, Sales and Offers.</span>
-                                </h4>
-                                <div class="newsletter-form-head">
-                                    <form action="#" method="get" target="_blank" class="newsletter-form">
-                                        <input name="EMAIL" placeholder="Email address here..." type="email">
-                                        <div class="button">
-                                            <button class="btn">Subscribe<span class="dir-part"></span></button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
         <div class="footer-middle">
             <div class="container">
                 <div class="bottom-inner">
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-footer our-app">
+                                <img src="{{ asset('/website') }}/assets/images/logo/logo.png" alt="#" style="max-width: 250px;">
+                            </div>
+                        </div>
 
+                        <div class="col-lg-3 col-md-6 col-12">
                             <div class="single-footer f-contact">
                                 <h3>Get In Touch With Us</h3>
                                 <p class="phone">Phone: +1 (900) 33 169 7720</p>
@@ -48,37 +19,15 @@
                                     <li><span>Saturday: </span> 10.00 am - 6.00 pm</li>
                                 </ul>
                                 <p class="mail">
-                                    <a
-                                        href="https://demo.graygrids.com/cdn-cgi/l/email-protection#5b282e2b2b34292f1b2833342b3c29323f2875383436"><span
+                                    <a href="https://demo.graygrids.com/cdn-cgi/l/email-protection#5b282e2b2b34292f1b2833342b3c29323f2875383436">
+                                        <span
                                             class="__cf_email__"
-                                            data-cfemail="98ebede8e8f7eaecd8ebf0f7e8ffeaf1fcebb6fbf7f5">[email&#160;protected]</span></a>
+                                            data-cfemail="98ebede8e8f7eaecd8ebf0f7e8ffeaf1fcebb6fbf7f5">[email&#160;protected]</span>
+                                        </a>
                                 </p>
                             </div>
-
                         </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-
-                            <div class="single-footer our-app">
-                                <h3>Our Mobile App</h3>
-                                <ul class="app-btn">
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <i class="lni lni-apple"></i>
-                                            <span class="small-title">Download on the</span>
-                                            <span class="big-title">App Store</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <i class="lni lni-play-store"></i>
-                                            <span class="small-title">Download on the</span>
-                                            <span class="big-title">Google Play</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
+                        
                         <div class="col-lg-3 col-md-6 col-12">
 
                             <div class="single-footer f-link">
@@ -93,8 +42,8 @@
                             </div>
 
                         </div>
-                        <div class="col-lg-3 col-md-6 col-12">
 
+                        <div class="col-lg-3 col-md-6 col-12">
                             <div class="single-footer f-link">
                                 <h3>Shop Departments</h3>
                                 <ul>

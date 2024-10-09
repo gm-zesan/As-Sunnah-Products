@@ -2,7 +2,7 @@
 <html class="no-js" lang="zxx">
 
 <head>
-    <title>My-Commerce - @yield('title')</title>
+    <title>As Sunnah Products - @yield('title')</title>
     @include('website.includes.style')
 </head>
 

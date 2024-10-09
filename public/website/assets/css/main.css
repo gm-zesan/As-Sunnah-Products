@@ -1,12 +1,27 @@
 @import "https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap";
+/* :root {
+    --primary-color: #4B8B3B;
+    --secondary-color: #A1CDA0;
+    --background-color: #F9F7E7;
+    --highlight-color: #FFABAB;
+    --accent-color: #D2A44D;
+} */
+
 :root {
-    --text-color: #0A3D62;
-    --background-color: #FFFFFF;
-    --highlight-color: #008000;
-    --accent-color: #D4AF37;
-    --secondary-background: #F5F5DC;
+    --white-color: #FFFFFF;
+    --dark-color: #000000;
+    --text-color: #3C3C3C;
+    --primary-color: #4B8B3B;
+    --secondary-color: #A1CDA0;
+    --background-color: #F9F7E7;
+    --highlight-color: #FFABAB;
+    --highlight-color: #D2A44D;
+    --accent-color: #D2A44D;
     --background-color-rgb: 0, 128, 0;
 }
+
+
+
 
 
 html{
@@ -16,7 +31,7 @@ body{
     font-family:manrope,sans-serif;
     font-weight:500;
     font-style:normal;
-    color:#888;
+    color: var(--text-color);
     overflow-x:hidden;
     font-size:14px
 }
@@ -45,7 +60,7 @@ p{
 select{
     -webkit-writing-mode:horizontal-tb!important;
     text-rendering:auto;
-    color: var(--text-color);
+    color: var(--primary-color);
     letter-spacing:normal;
     word-spacing:normal;
     text-transform:none;
@@ -132,7 +147,7 @@ ul,ol{
     padding:30px 0;
     z-index:2;
     text-align:left;
-    background-color:#fff;
+    background-color:var(--white-color);
     -webkit-box-shadow:0 7px 30px rgba(0,0,0,.075);
     box-shadow:0 7px 30px rgba(0,0,0,.075)
 }
@@ -144,7 +159,7 @@ ul,ol{
 }
 .breadcrumbs .breadcrumbs-content .page-title{
     font-size:18px;
-    color: var(--text-color);
+    color: var(--primary-color);
     font-weight:600;
     position:relative;
     line-height:28px;
@@ -280,7 +295,7 @@ ul,ol{
     -ms-flex-align:center;
     align-items:center;
     font-size:16px;
-    color:#fff!important;
+    color:var(--white-color)!important;
     position:fixed;
     bottom:30px;
     right:30px;
@@ -341,8 +356,8 @@ ul,ol{
     margin-right:0
 }
 .pagination .pagination-list li a{
-    background:#fff;
-    color: var(--text-color);
+    background:var(--white-color);
+    color: var(--primary-color);
     font-weight:500;
     font-size:14px;
     border-radius:4px;
@@ -352,7 +367,7 @@ ul,ol{
 }
 .pagination .pagination-list li.active a,.pagination .pagination-list li:hover a{
     background:var(--highlight-color);
-    color:#fff;
+    color:var(--white-color);
     border-color:transparent
 }
 .pagination .pagination-list li a i{
@@ -368,9 +383,9 @@ ul,ol{
     font-size:14px;
     font-weight:600;
     padding:13px 30px;
-    background-color:var(--highlight-color);
-    color:#fff;
-    border:none;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    border:2px solid var(--accent-color);
     -webkit-transition:.2s;
     transition:.2s;
     border-radius:3px;
@@ -388,19 +403,19 @@ ul,ol{
     margin:0
 }
 .button .btn:hover{
-    color:#fff;
-    background-color: var(--text-color);
+    color:var(--accent-color);
+    background-color: var(--white-color);
     -webkit-box-shadow:0 4px 4px #0000000f;
     box-shadow:0 4px 4px #0000000f
 }
 .button .btn-alt{
     background-color:#081828!important;
-    color:#fff!important
+    color:var(--white-color)!important
 }
 
 .button .btn-alt:hover{
     background-color:var(--highlight-color)!important;
-    color:#fff!important
+    color:var(--white-color)!important
 }
 .align-left{
     text-align:left
@@ -418,7 +433,7 @@ ul,ol{
     z-index:999999999;
     width:100%;
     height:100%;
-    background-color:#fff;
+    background-color:var(--white-color);
     overflow:hidden
 }
 .preloader-inner{
@@ -472,12 +487,12 @@ ul,ol{
 }
 .header{
     width:100%;
-    background:#fff;
+    background:var(--white-color);
     position:relative;
     width:100%
 }
 .header .topbar{
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     padding:18px 0
 }
 
@@ -492,7 +507,7 @@ ul,ol{
     position:relative;
     border:none;
     padding:0 10px 0 0;
-    color:#fff!important;
+    color:var(--white-color)!important;
     font-weight:500;
     font-size:14px;
     background-color:#081828!important
@@ -504,8 +519,8 @@ ul,ol{
     box-shadow:none
 }
 .header .topbar .top-left .menu-top-link .select-position::after{
-    border-bottom:2px solid #fff;
-    border-right:2px solid #fff;
+    border-bottom:2px solid var(--white-color);
+    border-right:2px solid var(--white-color);
     content:'';
     display:block;
     height:6px;
@@ -543,7 +558,7 @@ ul,ol{
     border:none
 }
 .header .topbar .top-middle .useful-links li a{
-    color:#fff;
+    color:var(--white-color);
     font-size:14px;
     font-weight:500
 }
@@ -556,14 +571,14 @@ ul,ol{
 }
 
 .header .topbar .top-end .user{
-    color:#fff;
+    color:var(--white-color);
     display:inline-block;
     margin-right:5px;
     font-weight:500;
     font-size:14px
 }
 .header .topbar .top-end .user i{
-    color:#fff;
+    color:var(--white-color);
     display:inline-block;
     margin-right:5px;
     font-size:16px
@@ -587,7 +602,7 @@ ul,ol{
     border-right:none
 }
 .header .topbar .top-end .user-login li a{
-    color:#fff;
+    color:var(--white-color);
     font-weight:500;
     font-size:14px;
     white-space:nowrap
@@ -607,7 +622,8 @@ ul,ol{
     align-items:center;
     padding:0px 0;
     border-bottom:1px solid #eee;
-    background-color: rgba(var(--background-color-rgb), 0.3);
+    background-color: var(--secondary-color);
+    /* background-color: rgba(var(--background-color-rgb), 0.3); */
 }
 
 .header .middle-right-area{
@@ -629,7 +645,7 @@ ul,ol{
 }
 
 .header .nav-hotline i{
-    color: var(--text-color);
+    color: var(--primary-color);
     font-size:18px;
     position:absolute;
     left:0;
@@ -663,48 +679,28 @@ ul,ol{
     display:flex;
     -webkit-box-pack:end;
     -ms-flex-pack:end;
-    justify-content:end
+    justify-content:end;
+    align-items:center;
 }
-.header .navbar-cart .wishlist{
-    margin-right:12px
+.header .navbar-cart .account-info ul{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
 }
-.header .navbar-cart .wishlist a{
-    height:40px;
-    width:40px;
-    line-height:40px;
-    display:inline-block;
-    border-radius:50%;
-    border:1px solid #eee;
-    color:#555;
-    font-size:18px;
-    text-align:center;
-    position:relative
+.header .navbar-cart .account-info ul li{
+    margin-left: 10px;
 }
-.header .navbar-cart .wishlist a:hover{
-    color:#fff;
-    background-color:var(--highlight-color);
-    border-color:transparent
-}
-.header .navbar-cart .wishlist a .total-items{
-    position:absolute;
-    right:-6px;
-    top:-5px;
-    height:19px;
-    width:19px;
-    line-height:19px;
-    background-color: var(--text-color);
-    color:#fff;
-    font-size:12px;
-    font-weight:500;
-    text-align:center;
-    border-radius:50%
+.header .navbar-cart .account-info ul li a{
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 500;
 }
 .header .navbar-cart .cart-items{
     position:relative
 }
 .header .navbar-cart .cart-items:hover .main-btn{
-    color:#fff;
-    background-color:var(--highlight-color);
+    color:var(--white-color);
+    background-color:var(--primary-color);
     border-color:transparent
 }
 .header .navbar-cart .cart-items .main-btn{
@@ -726,8 +722,8 @@ ul,ol{
     height:19px;
     width:19px;
     line-height:19px;
-    background-color: var(--text-color);
-    color:#fff;
+    background-color: var(--primary-color);
+    color:var(--white-color);
     font-size:12px;
     font-weight:500;
     text-align:center;
@@ -742,7 +738,7 @@ ul,ol{
     top:72px;
     right:0;
     width:300px;
-    background:#fff;
+    background:var(--white-color);
     padding:20px 25px;
     -webkit-transition:all .3s ease 0s;
     transition:all .3s ease 0s;
@@ -793,7 +789,7 @@ ul,ol{
     width:20px;
     line-height:18px;
     text-align:center;
-    background:#fff;
+    background:var(--white-color);
     color:#222;
     border-radius:50%;
     font-size:9px;
@@ -802,7 +798,7 @@ ul,ol{
 }
 .header .navbar-cart .cart-items .shopping-item .shopping-list li .remove:hover{
     border-color:transparent;
-    color:#fff;
+    color:var(--white-color);
     background-color:var(--highlight-color)
 }
 .header .navbar-cart .cart-items .shopping-item .shopping-list li .cart-img-head{
@@ -926,7 +922,7 @@ ul,ol{
     width:100%;
     height:45px;
     border:1px solid #e2e2e2;
-    background-color:#fff;
+    background-color:var(--white-color);
     color:#000;
     border-radius:0;
     padding:0 15px;
@@ -936,7 +932,7 @@ ul,ol{
 }
 .header .main-menu-search .search-btn button{
     background-color:var(--highlight-color);
-    color:#fff;
+    color:var(--white-color);
     width:45px;
     height:45px;
     padding:0;
@@ -948,7 +944,7 @@ ul,ol{
     font-size:18px
 }
 .header .main-menu-search .search-btn button:hover{
-    color:#fff;
+    color:var(--white-color);
     background-color:#081828
 }
 
@@ -975,7 +971,7 @@ ul,ol{
 
 .header .mega-category-menu .cat-button{
     display:inline-block;
-    color: var(--text-color);
+    color: var(--primary-color);
     font-size:15px;
     font-weight:600
 }
@@ -998,7 +994,7 @@ ul,ol{
     width:241px;
     height:auto;
     border:1px solid #eee;
-    background-color:#fff;
+    background-color:var(--white-color);
     opacity:0;
     visibility:hidden;
     border-radius:0;
@@ -1022,7 +1018,7 @@ ul,ol{
     width:240px;
     height:auto;
     border:1px solid #eee;
-    background-color:#fff;
+    background-color:var(--white-color);
     border-radius:0;
     left:239px;
     opacity:0;
@@ -1038,7 +1034,7 @@ ul,ol{
     margin:0
 }
 .header .mega-category-menu .sub-category li .inner-sub-category li a{
-    color: var(--text-color);
+    color: var(--primary-color);
     text-transform:capitalize;
     font-size:14px;
     position:relative;
@@ -1052,7 +1048,7 @@ ul,ol{
     margin:0
 }
 .header .mega-category-menu .sub-category li a{
-    color: var(--text-color);
+    color: var(--primary-color);
     text-transform:capitalize;
     font-size:14px;
     position:relative;
@@ -1081,7 +1077,7 @@ ul,ol{
 .header .nav-social .title{
     font-size:14px;
     font-weight:600;
-    color: var(--text-color);
+    color: var(--primary-color);
     display:inline-block;
     margin-right:15px
 }
@@ -1105,7 +1101,7 @@ ul,ol{
     color:#555
 }
 .header .nav-social ul li a:hover{
-    color:#fff;
+    color:var(--white-color);
     background-color:var(--highlight-color);
     border-color:transparent
 }
@@ -1129,17 +1125,17 @@ ul,ol{
 }
 .header.sticky .button .btn{
     background-color:var(--highlight-color);
-    color:#fff;
+    color:var(--white-color);
     border-color:transparent
 }
 .header.sticky .button .btn:hover{
-    background-color: var(--text-color);
-    color:#fff
+    background-color: var(--primary-color);
+    color:var(--white-color)
 }
 .sticky{
     position:fixed;
     z-index:99;
-    background-color:#fff;
+    background-color:var(--white-color);
     -webkit-box-shadow:0 20px 50px 0 rgba(0,0,0,.05);
     box-shadow:0 20px 50px 0 rgba(0,0,0,.05);
     -webkit-transition:all .3s ease-out 0s;
@@ -1177,7 +1173,7 @@ ul,ol{
     box-shadow:0 20px 50px 0 rgba(0,0,0,.05);
     -webkit-transition:all .3s ease-out 0s;
     transition:all .3s ease-out 0s;
-    background:#fff;
+    background:var(--white-color);
     padding:0 0
 }
 .navbar{
@@ -1238,7 +1234,7 @@ ul,ol{
 }
 .navbar-nav .nav-item a{
     font-size:14px;
-    color: var(--text-color);
+    color: var(--primary-color);
     -webkit-transition:all .3s ease-out 0s;
     transition:all .3s ease-out 0s;
     position:relative;
@@ -1289,7 +1285,7 @@ ul,ol{
 .navbar-nav .nav-item .sub-menu{
     padding:30px;
     min-width:240px;
-    background:#fff;
+    background:var(--white-color);
     border:1px solid #eee;
     position:absolute;
     top:110%!important;
@@ -1367,7 +1363,7 @@ ul,ol{
 }
 .hero-area{
     position:relative;
-    background-color:#fff;
+    background-color:var(--white-color);
     margin-top:12px
 }
 
@@ -1390,10 +1386,10 @@ ul,ol{
     height:60px;
     cursor:pointer;
     z-index:2;
-    color:#fff;
+    color:var(--white-color);
     font-size:17px;
-    background:var(--highlight-color);
-    border:none;
+    background:var(--accent-color);
+    border:2px solid var(--accent-color);
     padding:2px 5px;
     border-radius:4px;
     -webkit-transition:all .3s ease-out 0s;
@@ -1405,8 +1401,8 @@ ul,ol{
     border-radius:0
 }
 .hero-area .tns-controls button:hover{
-    background-color: var(--text-color);
-    color:#fff
+    background-color: var(--white-color);
+    color:var(--accent-color)
 }
 .hero-area .tns-controls button:first-child{
     left:-40px;
@@ -1515,14 +1511,14 @@ ul,ol{
 }
 
 .hero-area .hero-small-banner.style2 .content h2{
-    color:#fff
+    color:var(--white-color)
 }
 .hero-area .hero-small-banner.style2 .content h2 span{
-    color:#fff
+    color:var(--white-color)
 }
 .hero-area .hero-small-banner.style2 .content p{
     font-size:15px;
-    color:#fff;
+    color:var(--white-color);
     font-weight:600;
     margin-top:15px
 }
@@ -1530,13 +1526,13 @@ ul,ol{
     margin-top:20px
 }
 .hero-area .hero-small-banner.style2 .content .button .btn{
-    background-color:#fff;
+    background-color:var(--white-color);
     color:var(--highlight-color);
     padding:10px 25px
 }
 .hero-area .hero-small-banner.style2 .content .button .btn:hover{
     background-color:var(--highlight-color);
-    color:#fff
+    color:var(--white-color)
 }
 .shipping-info{
     background-color:#f9f9f9;
@@ -1560,7 +1556,7 @@ ul,ol{
 
 
 .shipping-info li:hover{
-    background-color:#fff
+    background-color:var(--white-color)
 }
 .shipping-info .media-icon{
     margin-bottom:15px
@@ -1588,11 +1584,12 @@ ul,ol{
 }
 .featured-categories .single-category{
     padding:40px;
-    margin-top:30px;
-    border:2px solid #f0f0f0;
+    border:2px solid var(--accent-color);
     position:relative;
-    background:#fff;
-    z-index:0
+    background:var(--white-color);
+    z-index:0;
+    min-height: 145px;
+    height: 100%;
 }
 .featured-categories .single-category .heading{
     font-size:17px;
@@ -1622,7 +1619,10 @@ ul,ol{
     top:50%;
     -webkit-transform:translateY(-50%);
     transform:translateY(-50%);
-    z-index:-1
+    z-index:-1;
+    max-height: 100%;
+    max-width: 100%;
+    height: 142px;
 }
 
 .single-product{
@@ -1634,7 +1634,8 @@ ul,ol{
     -webkit-box-shadow:0 0 20px #00000012;
     box-shadow:0 0 20px #00000012;
     padding:8px;
-    background:#fff
+    background:var(--white-color);
+    height: 100%;
 }
 .single-product .product-image{
     overflow:hidden;
@@ -1644,7 +1645,7 @@ ul,ol{
     background:#f73232;
     border-radius:2px;
     font-size:12px;
-    color:#fff;
+    color:var(--white-color);
     font-weight:700;
     position:absolute;
     top:0;
@@ -1656,7 +1657,7 @@ ul,ol{
     background:var(--highlight-color);
     border-radius:2px;
     font-size:12px;
-    color:#fff;
+    color:var(--white-color);
     font-weight:700;
     position:absolute;
     top:0;
@@ -1676,7 +1677,7 @@ ul,ol{
     visibility:hidden
 }
 .single-product .product-image .button .btn{
-    padding:12px 20px;
+    padding:12px 18px;
     font-size:13px;
     font-weight:600;
     width:140px
@@ -1702,7 +1703,7 @@ ul,ol{
 }
 .single-product .product-info{
     padding:20px;
-    background-color:#fff
+    background-color:var(--white-color)
 }
 .single-product .product-info .category{
     color:#888;
@@ -1785,7 +1786,7 @@ ul,ol{
 
 
 .single-banner .content .price span{
-    color: var(--text-color);
+    color: var(--primary-color);
     display:block;
     margin-top:10px;
     font-size:22px;
@@ -1808,7 +1809,7 @@ ul,ol{
 
 .special-offer .offer-content{
     text-align:left;
-    background-color:#fff;
+    background-color:var(--white-color);
     border-radius:4px;
     overflow:hidden;
     -webkit-box-shadow:0 0 20px #00000012;
@@ -1834,7 +1835,7 @@ ul,ol{
     background:#f73232;
     border-radius:2px;
     font-size:13px;
-    color:#fff;
+    color:var(--white-color);
     font-weight:700;
     position:absolute;
     top:10px;
@@ -1909,7 +1910,7 @@ ul,ol{
     border-radius:4px
 }
 .special-offer .offer-content .box{
-    background:#ffffff0d;
+    background:var(--white-color)fff0d;
     width:24%;
     height:auto;
     margin:0;
@@ -2007,7 +2008,7 @@ ul,ol{
     line-height:80px;
     text-align:center;
     color:var(--highlight-color);
-    background-color:#fff;
+    background-color:var(--white-color);
     border-radius:50%;
     left:50%;
     top:50%;
@@ -2019,7 +2020,7 @@ ul,ol{
     transition:all .4s ease-in-out
 }
 .about-us .content-left .video:hover{
-    color:#fff;
+    color:var(--white-color);
     background-color:var(--highlight-color);
     -webkit-transform:scale(1.05);
     transform:scale(1.05)
@@ -2031,7 +2032,7 @@ ul,ol{
     top:0;
     height:100%;
     width:100%;
-    border:1px solid #fff;
+    border:1px solid var(--white-color);
     border-radius:50%;
     -webkit-animation:pulse-border-2 2s linear infinite;
     animation:pulse-border-2 2s linear infinite
@@ -2144,7 +2145,7 @@ ul,ol{
     border:none;
     padding:15px 25px;
     padding-right:40px;
-    background-color:#fff
+    background-color:var(--white-color)
 }
 
 
@@ -2170,7 +2171,7 @@ ul,ol{
     right:20px
 }
 .accordion-button:not(.collapsed){
-    color:#fff;
+    color:var(--white-color);
     background-color:var(--highlight-color);
     border-radius:4px 4px 0 0
 }
@@ -2187,7 +2188,7 @@ ul,ol{
 .accordion-body{
     border-radius:0 0 4px 4px;
     padding:25px;
-    background-color:#fff
+    background-color:var(--white-color)
 }
 
 
@@ -2209,7 +2210,7 @@ ul,ol{
     margin:0
 }
 .blog-section{
-    background-color:#fff
+    background-color:var(--white-color)
 }
 .blog-section .section-title{
     margin-bottom:40px
@@ -2221,7 +2222,7 @@ ul,ol{
     -webkit-box-shadow:0 0 20px #00000012;
     box-shadow:0 0 20px #00000012;
     padding:8px;
-    background:#fff;
+    background:var(--white-color);
     border-radius:4px
 }
 .blog-section .single-blog .blog-img{
@@ -2255,7 +2256,7 @@ ul,ol{
 }
 .blog-section .single-blog .blog-content h4 a{
     font-size:19px;
-    color: var(--text-color);
+    color: var(--primary-color);
     display:inline-block;
     font-weight:700
 }
@@ -2276,7 +2277,7 @@ ul,ol{
 }
 .blog-section .single-blog .blog-content .button .btn:hover{
     background-color:var(--highlight-color);
-    color:#fff;
+    color:var(--white-color);
     border-color:transparent
 }
 .blog-list{
@@ -2298,7 +2299,7 @@ ul,ol{
     overflow:hidden
 }
 .blog-single .meta-information{
-    background-color:#fff;
+    background-color:var(--white-color);
     padding:20px 40px
 }
 
@@ -2339,7 +2340,7 @@ ul,ol{
     width:100%
 }
 .blog-single .detail-inner{
-    background-color:#fff;
+    background-color:var(--white-color);
     padding:40px;
     padding-top:10px
 }
@@ -2391,20 +2392,20 @@ ul,ol{
     position:absolute;
     left:0;
     top:4px;
-    color:#fff;
+    color:var(--white-color);
     font-size:15px;
     color:var(--highlight-color)
 }
 blockquote{
     position:relative;
-    color:#fff;
+    color:var(--white-color);
     font-weight:400;
     clear:both;
     z-index:1;
     margin:40px 0;
     text-align:center;
     padding:45px 40px 35px;
-    background-color:#fff;
+    background-color:var(--white-color);
     border-radius:0;
     border:1px solid #e2e2e2;
     border-radius:4px
@@ -2418,7 +2419,7 @@ blockquote .icon{
 }
 blockquote .icon i{
     font-size:22px;
-    color:#fff;
+    color:var(--white-color);
     display:block;
     margin-bottom:20px;
     height:50px;
@@ -2490,7 +2491,7 @@ blockquote span{
 }
 .post-bottom-area .post-social-media ul li a span{
     background-color:var(--highlight-color);
-    color:#fff;
+    color:var(--white-color);
     font-size:12px;
     font-weight:400;
     padding:4px 10px;
@@ -2522,7 +2523,7 @@ blockquote span{
     top:-35px
 }
 .post-comments{
-    background-color:#fff;
+    background-color:var(--white-color);
     padding:40px;
     margin-top:30px;
     border-radius:4px;
@@ -2610,7 +2611,7 @@ blockquote span{
     border-top:1px solid #eee
 }
 .comment-form{
-    background-color:#fff;
+    background-color:var(--white-color);
     padding:40px;
     margin-top:30px;
     border-radius:4px;
@@ -2636,9 +2637,9 @@ blockquote span{
 }
 .comment-form form .form-box .form-control-custom{
     border:none;
-    background:#fff;
+    background:var(--white-color);
     font-size:14px;
-    color: var(--text-color);
+    color: var(--primary-color);
     padding:0 25px;
     font-weight:500;
     height:50px;
@@ -2677,7 +2678,7 @@ blockquote span{
 }
 .sidebar .widget{
     padding:35px;
-    background-color:#fff;
+    background-color:var(--white-color);
     margin-bottom:30px;
     border-radius:4px;
     border:1px solid #e7e7e7;
@@ -2729,19 +2730,19 @@ blockquote span{
     width:42px;
     height:42px;
     z-index:1;
-    color:#fff!important;
+    color:var(--white-color)!important;
     font-size:18px;
     -webkit-transition:all .3s ease-out 0s;
     transition:all .3s ease-out 0s;
-    color:#fff;
+    color:var(--white-color);
     border-radius:4px;
     padding:0!important;
     border:none;
     background:var(--highlight-color)
 }
 .sidebar .widget.search-widget form button:hover{
-    background-color: var(--text-color);
-    color:#fff
+    background-color: var(--primary-color);
+    color:var(--white-color)
 }
 .sidebar .widget.popular-feeds .single-popular-feed{
     display:-webkit-box;
@@ -2845,7 +2846,7 @@ blockquote span{
     background:var(--highlight-color);
     margin-right:5px;
     margin-bottom:10px;
-    color:#fff;
+    color:var(--white-color);
     background:0 0;
     color:#888;
     border:1px solid #eee;
@@ -2853,12 +2854,12 @@ blockquote span{
 }
 .popular-tag-widget .tags>a:hover{
     background-color:var(--highlight-color);
-    color:#fff;
+    color:var(--white-color);
     border-color:transparent
 }
 .brands{
     padding:80px 0;
-    background-color:#f9f9f9
+    background-color:var(--secondary-color)
 }
 .brands #tns2>.tns-item{
     padding-right:28px
@@ -2889,7 +2890,7 @@ blockquote span{
     opacity:1
 }
 .team{
-    background-color:#fff
+    background-color:var(--white-color)
 }
 .team .single-team{
     text-align:center;
@@ -2946,14 +2947,14 @@ blockquote span{
 }
 .team .single-team .content .social li a:hover{
     border-color:transparent;
-    color:#fff;
+    color:var(--white-color);
     background-color:var(--highlight-color)
 }
 .item-details{
     background-color:#f9f9f9
 }
 .item-details .top-area{
-    background-color:#fff;
+    background-color:var(--white-color);
     padding:30px;
     border:1px solid #eee;
     border-radius:4px
@@ -3017,7 +3018,7 @@ blockquote span{
     color:var(--highlight-color)
 }
 .item-details .product-info .price{
-    color: var(--text-color);
+    color: var(--primary-color);
     display:block;
     font-size:24px;
     font-weight:600;
@@ -3126,7 +3127,7 @@ blockquote span{
     -webkit-transform:scale(1);
     transform:scale(1);
     border-radius:50%;
-    color:#fff
+    color:var(--white-color)
 }
 .item-details .product-info .form-group input:focus{
     outline:0
@@ -3174,7 +3175,7 @@ blockquote span{
 .item-details .product-info .quantity .inner-content input.button{
     width:35px;
     height:46px;
-    background-color:#fff;
+    background-color:var(--white-color);
     border:1px solid #e1e1e1;
     font-size:17px;
     font-weight:500;
@@ -3192,7 +3193,7 @@ blockquote span{
 .item-details .product-info .quantity .inner-content input.button:hover{
     background-color:var(--highlight-color);
     border-color:transparent;
-    color:#fff
+    color:var(--white-color)
 }
 .item-details .product-info .cart-button{
     width:100%
@@ -3222,7 +3223,7 @@ blockquote span{
     width:100%
 }
 .item-details .product-info .wish-button .btn:hover{
-    color:#fff;
+    color:var(--white-color);
     background-color:var(--highlight-color);
     border-color:transparent
 }
@@ -3299,7 +3300,7 @@ blockquote span{
     display:block;
     border-radius:4px;
     border:1px solid #eee;
-    background-color:#fff;
+    background-color:var(--white-color);
     color:var(--highlight-color);
     line-height:30px;
     font-size:12px
@@ -3310,7 +3311,7 @@ blockquote span{
 .item-details .product-info .social-share ul li a.facebook:hover{
     border-color:transparent;
     background-color:#3b5999;
-    color:#fff
+    color:var(--white-color)
 }
 .item-details .product-info .social-share ul li a.twitter{
     color:#55acee
@@ -3318,7 +3319,7 @@ blockquote span{
 .item-details .product-info .social-share ul li a.twitter:hover{
     border-color:transparent;
     background-color:#55acee;
-    color:#fff
+    color:var(--white-color)
 }
 .item-details .product-info .social-share ul li a.google{
     color:#dd4b39
@@ -3326,7 +3327,7 @@ blockquote span{
 .item-details .product-info .social-share ul li a.google:hover{
     border-color:transparent;
     background-color:#dd4b39;
-    color:#fff
+    color:var(--white-color)
 }
 .item-details .product-info .social-share ul li a.linkedin{
     color:#0077b5
@@ -3334,7 +3335,7 @@ blockquote span{
 .item-details .product-info .social-share ul li a.linkedin:hover{
     border-color:transparent;
     background-color:#0077b5;
-    color:#fff
+    color:var(--white-color)
 }
 .item-details .product-info .social-share ul li a.pinterest{
     color:#bd081c
@@ -3342,10 +3343,10 @@ blockquote span{
 .item-details .product-info .social-share ul li a.pinterest:hover{
     border-color:transparent;
     background-color:#bd081c;
-    color:#fff
+    color:var(--white-color)
 }
 .product-details-info .single-block{
-    background-color:#fff;
+    background-color:var(--white-color);
     padding:30px;
     border:1px solid #eee;
     border-radius:4px;
@@ -3421,7 +3422,7 @@ blockquote span{
     padding:12px 30px;
     width:100%;
     background-color:#ffa000;
-    color:#fff;
+    color:var(--white-color);
     font-size:14px;
     font-weight:500;
     border-radius:4px;
@@ -3429,7 +3430,7 @@ blockquote span{
     transition:all .4s ease
 }
 .product-details-info .give-review .review-btn:hover{
-    color:#fff;
+    color:var(--white-color);
     background-color:#081828
 }
 .product-details-info .reviews .title{
@@ -3489,7 +3490,7 @@ blockquote span{
     margin-top:10px;
     border-width:9px;
     border-color:transparent;
-    border-right-color:#fff
+    border-right-color:var(--white-color)
 }
 
 .product-details-info .reviews .single-review .review-info h4{
@@ -3584,26 +3585,37 @@ blockquote span{
 }
 .product-grids .product-grid-topbar{
     padding:15px 20px;
-    background-color:#fff;
+    background-color:var(--white-color);
     border-radius:4px;
     border:1px solid #eee;
     padding-right:15px
 }
-.product-grids .product-grid-topbar .product-sorting label{
+.product-sorting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product-sorting .sort-by {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-grids .product-grid-topbar .product-sorting .sort-by label{
     display:inline-block;
     margin:0;
     padding:8px 5px 8px 0;
     color:#999;
     font-size:14px;
-    font-weight:400
+    font-weight:400;
+    width: 100%;
 }
-.product-grids .product-grid-topbar .product-sorting .form-control{
+.product-grids .product-grid-topbar .product-sorting .sort-by .form-control{
     width:100%;
     max-width:186px;
     margin-right:10px;
     display:inline-block
 }
-.product-grids .product-grid-topbar .product-sorting select.form-control:not([size]):not([multiple]){
+.product-grids .product-grid-topbar .product-sorting .sort-by select.form-control:not([size]):not([multiple]){
     height:42px;
     font-size:14px;
     font-weight:400;
@@ -3643,13 +3655,13 @@ blockquote span{
 .product-grids .product-grid-topbar .nav button.active{
     background-color:var(--highlight-color);
     border-color:transparent;
-    color:#fff
+    color:var(--white-color)
 }
 .product-grids .product-grid-topbar .nav button:last-child{
     margin:0
 }
 .product-sidebar .single-widget{
-    background-color:#fff;
+    background-color:var(--white-color);
     padding:30px;
     border:1px solid #eee;
     border-radius:4px;
@@ -3675,7 +3687,7 @@ blockquote span{
     width:100%;
     border:1px solid #eee;
     border-radius:6px;
-    color: var(--text-color);
+    color: var(--primary-color);
     padding:0 15px;
     padding-right:50px
 }
@@ -3687,7 +3699,7 @@ blockquote span{
     border-radius:6px;
     border:none;
     background-color:transparent;
-    color: var(--text-color);
+    color: var(--primary-color);
     position:absolute;
     right:5px;
     top:50%;
@@ -3701,23 +3713,23 @@ blockquote span{
     color:var(--highlight-color)
 }
 .product-sidebar .single-widget.range input{
-    color: var(--text-color);
+    color: var(--primary-color);
     cursor:pointer
 }
 .product-sidebar .single-widget.range ::-webkit-input-placeholder{
-    color: var(--text-color);
+    color: var(--primary-color);
     opacity:1
 }
 .product-sidebar .single-widget.range :-ms-input-placeholder{
-    color: var(--text-color);
+    color: var(--primary-color);
     opacity:1
 }
 .product-sidebar .single-widget.range ::-ms-input-placeholder{
-    color: var(--text-color);
+    color: var(--primary-color);
     opacity:1
 }
 .product-sidebar .single-widget.range ::placeholder{
-    color: var(--text-color);
+    color: var(--primary-color);
     opacity:1
 }
 .product-sidebar .single-widget.range :-ms-input-placeholder{
@@ -3731,7 +3743,7 @@ blockquote span{
     padding-left:15px
 }
 .product-sidebar .single-widget.range label{
-    color: var(--text-color);
+    color: var(--primary-color);
     display:inline-block;
     position:absolute;
     left:0;
@@ -3771,9 +3783,16 @@ blockquote span{
     background-color:var(--highlight-color);
     border-color:var(--highlight-color)
 }
-.product-sidebar .single-widget .list li{
+.product-sidebar .single-widget .list>li{
     margin-bottom:12px
 }
+.product-sidebar .single-widget .list>li .sub-category-list{
+    margin-left:20px;
+}
+.product-sidebar .single-widget .list>li .sub-category-list i{
+    font-size: 10px;
+}
+
 .product-sidebar .single-widget .list li:last-child{
     margin:0
 }
@@ -3802,19 +3821,19 @@ blockquote span{
     border:1px solid #eee
 }
 .cart-list-title{
-    background-color:#fff;
+    background-color:var(--white-color);
     padding:18px 20px;
     border-bottom:1px solid #eee
 }
 
 .cart-list-title p{
-    color: var(--text-color);
+    color: var(--primary-color);
     font-weight:500;
     font-size:14px
 }
 
 .cart-single-list .remove-item{
-    color:#fff;
+    color:var(--white-color);
     background-color:#f44336;
     font-size:8px;
     height:20px;
@@ -3825,7 +3844,7 @@ blockquote span{
 }
 
 .cart-single-list .remove-item:hover{
-    color:#fff;
+    color:var(--white-color);
     background-color:#081828
 }
 .cart-single-list .product-name{
@@ -3850,7 +3869,7 @@ blockquote span{
 }
 .cart-single-list{
     padding:30px 20px;
-    background-color:#fff;
+    background-color:var(--white-color);
     border-bottom:1px solid #eee
 }
 .cart-single-list:last-child{
@@ -3866,7 +3885,7 @@ blockquote span{
 .shopping-cart .total-amount .right ul li{
     font-size:14px;
     font-weight:500;
-    color: var(--text-color);
+    color: var(--primary-color);
     margin-bottom:12px
 }
 .shopping-cart .total-amount .right ul li span{
@@ -3876,7 +3895,7 @@ blockquote span{
 .shopping-cart .total-amount .coupon{
     padding:40px;
     border:1px solid #eee;
-    background-color:#fff;
+    background-color:var(--white-color);
     border-radius:4px;
     margin-top:40px;
     display:inline-block
@@ -3909,7 +3928,7 @@ blockquote span{
 .shopping-cart .total-amount .right{
     padding:40px;
     border:1px solid #eee;
-    background-color:#fff;
+    background-color:var(--white-color);
     border-radius:4px;
     margin-top:40px
 }
@@ -3953,7 +3972,7 @@ blockquote span{
     transition:color .25s,background-color .25s,border-color .25s;
     border:1px solid #e0e0e0;
     border-radius:4px;
-    background-color:#fff;
+    background-color:var(--white-color);
     color:#505050;
     font-size:14px;
     -webkit-appearance:none;
@@ -3985,7 +4004,7 @@ blockquote span{
     border-radius:4px 4px 0 0;
     padding:8px 25px;
     color:var(--highlight-color);
-    background-color:#fff
+    background-color:var(--white-color)
 }
 .checkout-steps-form-style-1 .title.collapsed{
     border-radius:4px;
@@ -4009,7 +4028,7 @@ blockquote span{
     padding-top:0;
     border:1px solid #e6e6e6;
     border-top-color:transparent;
-    background-color:#fff;
+    background-color:var(--white-color);
     border-radius:0 0 4px 4px
 }
 .checkout-steps-form-style-1 .single-form{
@@ -4116,7 +4135,7 @@ blockquote span{
     -webkit-transform:scale(1);
     transform:scale(1);
     border-radius:4px;
-    color:#fff
+    color:var(--white-color)
 }
 .checkout-steps-form-style-1 .single-checkbox p{
     display:inline;
@@ -4169,7 +4188,7 @@ blockquote span{
 }
 .checkout-steps-form-style-1 .single-payment-option input[type=radio]:checked+label{
     border-color:var(--highlight-color);
-    background-color:#fff
+    background-color:var(--white-color)
 }
 .checkout-steps-form-style-1 .single-payment-option p{
     font-size:14px;
@@ -4207,7 +4226,7 @@ blockquote span{
     margin-right:15px
 }
 .checkout-sidebar-coupon{
-    background-color:#fff;
+    background-color:var(--white-color);
     padding:25px;
     border:1px solid #e6e6e6;
     border-radius:4px
@@ -4242,7 +4261,7 @@ blockquote span{
     padding-right:120px
 }
 .checkout-sidebar-price-table{
-    background-color:#fff;
+    background-color:var(--white-color);
     padding:25px;
     border:1px solid #e6e6e6;
     border-radius:4px
@@ -4266,7 +4285,7 @@ blockquote span{
     font-weight:400;
     font-size:15px;
     line-height:22px;
-    color: var(--text-color);
+    color: var(--primary-color);
     padding-bottom:12px;
     margin-bottom:10px;
     border-bottom:1px solid #e6e6e6
@@ -4306,7 +4325,7 @@ blockquote span{
     padding:42px;
     border:1px solid #e6e6e6;
     border-radius:4px;
-    background-color:#fff;
+    background-color:var(--white-color);
     -webkit-box-shadow:0 5px 40px #00000008;
     box-shadow:0 5px 40px #00000008
 }
@@ -4320,7 +4339,7 @@ blockquote span{
 .account-login .login-form .title h3{
     font-size:22px;
     font-weight:700;
-    color: var(--text-color);
+    color: var(--primary-color);
     margin-bottom:10px
 }
 .account-login .login-form .social-login .btn{
@@ -4345,7 +4364,7 @@ blockquote span{
 .account-login .login-form .social-login .facebook-btn:hover{
     background-color:#3b5998;
     border-color:transparent;
-    color:#fff
+    color:var(--white-color)
 }
 .account-login .login-form .social-login .twitter-btn{
     border-color:#55acee;
@@ -4355,7 +4374,7 @@ blockquote span{
 .account-login .login-form .social-login .twitter-btn:hover{
     background-color:#55acee;
     border-color:transparent;
-    color:#fff
+    color:var(--white-color)
 }
 .account-login .login-form .social-login .google-btn{
     border-color:#dd4b39;
@@ -4365,7 +4384,7 @@ blockquote span{
 .account-login .login-form .social-login .google-btn:hover{
     background-color:#dd4b39;
     border-color:transparent;
-    color:#fff
+    color:var(--white-color)
 }
 .account-login .bottom-content{
     margin-top:25px
@@ -4381,7 +4400,7 @@ blockquote span{
 
 .account-login .alt-option span{
     font-size:14px;
-    background:#fff;
+    background:var(--white-color);
     color:#888;
     padding:5px 15px
 }
@@ -4408,7 +4427,7 @@ blockquote span{
     -webkit-transition:color .25s,background-color .25s,border-color .25s;
     transition:color .25s,background-color .25s,border-color .25s;
     border:1px solid #e0e0e0;
-    background-color:#fff;
+    background-color:var(--white-color);
     color:#505050;
     font-size:14px;
     -webkit-appearance:none;
@@ -4438,7 +4457,7 @@ blockquote span{
     display:block;
     font-size:14px;
     font-weight:500;
-    color: var(--text-color);
+    color: var(--primary-color);
     margin-top:30px;
     text-align:center
 }
@@ -4452,7 +4471,7 @@ blockquote span{
     padding:40px;
     border:1px solid #e6e6e6;
     border-radius:4px;
-    background-color:#fff;
+    background-color:var(--white-color);
     -webkit-box-shadow:0 5px 40px #00000008;
     box-shadow:0 5px 40px #00000008
 }
@@ -4463,7 +4482,7 @@ blockquote span{
 .register-form .title h3{
     font-size:22px;
     font-weight:700;
-    color: var(--text-color);
+    color: var(--primary-color);
     margin-bottom:10px
 }
 .register-form .form-group label{
@@ -4475,7 +4494,7 @@ blockquote span{
     -webkit-transition:color .25s,background-color .25s,border-color .25s;
     transition:color .25s,background-color .25s,border-color .25s;
     border:1px solid #e0e0e0;
-    background-color:#fff;
+    background-color:var(--white-color);
     color:#505050;
     font-size:14px;
     -webkit-appearance:none;
@@ -4496,7 +4515,7 @@ blockquote span{
     display:block;
     font-size:14px;
     font-weight:500;
-    color: var(--text-color);
+    color: var(--primary-color);
     margin-top:30px;
     text-align:center
 }
@@ -4508,7 +4527,7 @@ blockquote span{
 }
 .contact-us{
     position:relative;
-    background-color:#fff
+    background-color:var(--white-color)
 }
 .contact-us .contact-info .single-info-head{
     margin-top:30px;
@@ -4538,7 +4557,7 @@ blockquote span{
 .contact-us .contact-info .single-info h3{
     font-size:16px;
     font-weight:600;
-    color: var(--text-color);
+    color: var(--primary-color);
     margin-bottom:10px;
     -webkit-transition:all .3s ease;
     transition:all .3s ease
@@ -4570,11 +4589,11 @@ blockquote span{
     font-weight:700;
     display:block;
     margin-bottom:10px;
-    color:#fff
+    color:var(--white-color)
 }
 
 .contact-form-head .contact-inner-title p{
-    color:#fff
+    color:var(--white-color)
 }
 .contact-form-head .contact-inner-title .question{
     display:block;
@@ -4592,7 +4611,7 @@ blockquote span{
     font-size:20px;
     font-weight:600;
     padding-top:15px;
-    color:#fff
+    color:var(--white-color)
 }
 .contact-form-head .contact-inner-title .question h4 span{
     font-size:13px;
@@ -4605,7 +4624,7 @@ blockquote span{
     margin-top:40px
 }
 .contact-form-head .contact-inner-title .day-list li{
-    color:#fff;
+    color:var(--white-color);
     font-weight:500;
     margin-bottom:3px;
     display:block
@@ -4616,7 +4635,7 @@ blockquote span{
 .contact-form-head .contact-inner-title .call-back{
     font-size:15px;
     font-weight:500;
-    color:#fff;
+    color:var(--white-color);
     display:inline-block;
     margin-top:30px;
     text-transform:capitalize
@@ -4656,7 +4675,7 @@ blockquote span{
     color:#333;
     font-weight:400;
     border-radius:4px;
-    background-color:#fff;
+    background-color:var(--white-color);
     -webkit-transition:all .4s ease;
     transition:all .4s ease
 }
@@ -4673,7 +4692,7 @@ blockquote span{
     font-weight:400;
     resize:vertical;
     border-radius:4px;
-    background-color:#fff;
+    background-color:var(--white-color);
     -webkit-transition:all .4s ease;
     transition:all .4s ease
 }
@@ -4703,7 +4722,7 @@ blockquote span{
     width:auto;
     margin-left:auto;
     margin-right:auto;
-    background-color:#fff;
+    background-color:var(--white-color);
     position:relative;
     background-image:url(../images/error/404-bg.png);
     background-repeat:no-repeat;
@@ -4733,7 +4752,7 @@ blockquote span{
 .error-area .error-content h2{
     font-size:25px;
     margin-bottom:10px;
-    color: var(--text-color);
+    color: var(--primary-color);
     font-weight:700
 }
 
@@ -4786,12 +4805,12 @@ blockquote span{
     margin-bottom:20px
 }
 .footer{
-    background-color: var(--text-color);
+    background-color: var(--dark-color);
     position:relative
 }
 .footer .footer-top .inner-content{
-    padding:60px 0;
-    border-bottom:1px solid #ffffff26
+    padding:40px 0;
+    border-bottom:1px solid var(--white-color)
 }
 
 .footer .footer-top .footer-logo a img{
@@ -4799,7 +4818,7 @@ blockquote span{
 }
 
 .footer .footer-top .footer-newsletter .title{
-    color:#fff;
+    color:var(--white-color);
     font-size:20px;
     font-weight:800;
     float:left
@@ -4825,21 +4844,21 @@ blockquote span{
     display:inline-block;
     border:none;
     padding:0 20px;
-    color:#fff
+    color:var(--white-color)
 }
 
 
 .footer .footer-top .footer-newsletter .newsletter-form input::-webkit-input-placeholder{
-    color:#fff
+    color:var(--white-color)
 }
 .footer .footer-top .footer-newsletter .newsletter-form input:-ms-input-placeholder{
-    color:#fff
+    color:var(--white-color)
 }
 .footer .footer-top .footer-newsletter .newsletter-form input::-ms-input-placeholder{
-    color:#fff
+    color:var(--white-color)
 }
 .footer .footer-top .footer-newsletter .newsletter-form input::placeholder{
-    color:#fff
+    color:var(--white-color)
 }
 .footer .footer-top .footer-newsletter .newsletter-form .button{
     display:inline-block;
@@ -4852,9 +4871,14 @@ blockquote span{
     height:50px
 }
 
+.footer .footer-top .footer-newsletter .newsletter-form .button .btn{
+    color: var(--accent-color);
+    background-color:var(--white-color);
+    transition: .3s all ease;
+}
 .footer .footer-top .footer-newsletter .newsletter-form .button .btn:hover{
-    color: var(--text-color);
-    background-color:#fff
+    background-color: var(--accent-color);
+    color:var(--white-color)
 }
 .footer .footer-middle{
     padding-top:40px;
@@ -4872,12 +4896,12 @@ blockquote span{
     margin-top:12px
 }
 .footer .footer-middle .newsletter-form .button .btn{
-    background-color: var(--text-color);
-    color:#fff
+    background-color: var(--primary-color);
+    color:var(--white-color)
 }
 .footer .footer-middle .newsletter-form .button .btn:hover{
     background-color:var(--highlight-color);
-    color:#fff
+    color:var(--white-color)
 }
 .footer .footer-middle .newsletter-form p{
     color:#888;
@@ -4891,7 +4915,7 @@ blockquote span{
     position:relative;
     margin-bottom:32px;
     padding-bottom:15px;
-    color:#fff;
+    color:var(--white-color);
     font-size:17px;
     font-weight:600;
     line-height:24px
@@ -4967,10 +4991,10 @@ blockquote span{
     border-radius:4px;
     padding:15px 30px;
     padding-left:60px;
-    color:#fff;
+    color:var(--white-color);
     -webkit-transition:all .3s ease;
     transition:all .3s ease;
-    background-color:#ffffff0f
+    background-color:var(--white-color)fff0f
 }
 .footer .single-footer.our-app .app-btn li a i{
     font-size:27px;
@@ -4985,7 +5009,7 @@ blockquote span{
 .footer .single-footer.our-app .app-btn li a .small-title{
     font-size:13px;
     display:block;
-    color:#fff;
+    color:var(--white-color);
     -webkit-transition:all .3s ease;
     transition:all .3s ease
 }
@@ -4993,29 +5017,29 @@ blockquote span{
     font-size:14px;
     font-weight:500;
     display:block;
-    color:#fff;
+    color:var(--white-color);
     -webkit-transition:all .3s ease;
     transition:all .3s ease
 }
 .footer .single-footer.our-app .app-btn li a:hover{
     background-color:var(--highlight-color);
-    color:#fff;
+    color:var(--white-color);
     border-color:transparent
 }
 .footer .single-footer.our-app .app-btn li a:hover .small-title{
-    color:#fff
+    color:var(--white-color)
 }
 .footer .single-footer.our-app .app-btn li a:hover .big-title{
-    color:#fff
+    color:var(--white-color)
 }
 .footer .footer-bottom .inner-content{
-    border-top:1px solid #ffffff26;
+    border-top:1px solid var(--white-color);
     padding:25px 0
 }
 .footer .footer-bottom .payment-gateway span{
     display:inline-block;
     margin-right:12px;
-    color:#fff
+    color:var(--white-color)
 }
 
 .footer .footer-bottom .payment-gateway img{
@@ -5025,7 +5049,7 @@ blockquote span{
     text-align:center
 }
 .footer .footer-bottom .copyright p{
-    color:#fff
+    color:var(--white-color)
 }
 .footer .footer-bottom .copyright p a{
     color:#eee;
@@ -5052,19 +5076,126 @@ blockquote span{
     width:35px;
     text-align:center;
     display:block;
-    color:#fff;
+    color:var(--white-color);
     border-radius:50%;
     line-height:35px;
     font-size:15px
 }
 .footer .footer-bottom .socila li a:hover{
     background-color:var(--highlight-color);
-    color:#fff;
+    color:var(--white-color);
     border-color:transparent
 }
 .footer .footer-bottom .socila li span{
     display:inline-block;
-    color:#fff;
+    color:var(--white-color);
     margin-right:12px
 }
 
+/*----------------------------------------*/
+
+
+
+/* default paggenation css */
+
+/* pagination */
+.wrap-pagination {
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 100px;
+}
+.wrap-pagination .pagination {
+	position: relative;
+	height: 60px;
+	background-color: var(--background-color);
+	box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(.3rem);
+	border-radius: .2rem;
+}
+.wrap-pagination .pagination li {
+	list-style-type: none;
+	display: inline-block;
+}
+  .wrap-pagination .pagination li a {
+	position: relative;
+	padding: 20px 25px;
+	text-decoration: none;
+	color: var(--highlight-color);
+	font-weight: 500;
+}
+.wrap-pagination .pagination li:not(:last-child) a{
+    border-right: 2px solid var(--highlight-color);
+}
+.wrap-pagination .pagination li a:hover,
+.wrap-pagination .pagination li.active a {
+	background: rgba(255, 255, 255, 0.2);
+}
+.pagination_numbering{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.all_paginate{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    column-gap: 3px;
+}
+.all_paginate .prev_page,
+.all_paginate .next_page {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0px 30px;
+    opacity: .7;
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    cursor: not-allowed;
+    color: var(--white-color);
+}
+/* .all_paginate .prev_page{
+    border-radius: 5px 0 0 5px;
+}
+.all_paginate .next_page{
+    border-radius: 0 7px 7px 0;
+} */
+.all_paginate .prev_page:hover,
+.all_paginate .next_page:hover {
+    opacity: 1;
+}
+p.pagenate_info{
+    text-align: center;
+    color: var(--accent-color);
+    opacity: .7;
+    font-size: 18px;
+}
+.all_paginate .page_number{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 60px;
+    opacity: .7;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    cursor: not-allowed;
+}
+.all_paginate .page_number:hover{
+    opacity: 1;
+}
+.all_paginate .page_number.active{
+    background-color: var(--accent-color)!important;
+    color: var(--white-color);
+}
+.all_paginate .cursor{
+    cursor: pointer;
+}

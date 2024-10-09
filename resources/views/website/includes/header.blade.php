@@ -61,12 +61,7 @@
                             </h3>
                         </div>
                         <div class="navbar-cart">
-                            <div class="wishlist">
-                                <a href="javascript:void(0)">
-                                    <i class="lni lni-heart"></i>
-                                    <span class="total-items">0</span>
-                                </a>
-                            </div>
+                            
                             <div class="cart-items">
                                 <a href="javascript:void(0)" class="main-btn">
                                     <i class="lni lni-cart"></i>
@@ -111,6 +106,27 @@
                                 </div>
 
                             </div>
+
+                            <div class="account-info">
+                                <ul>
+                                    @if (Session::get('customer_id'))
+                                        <div class="user">
+                                            <i class="lni lni-user"></i>
+                                            Hello {{ Session::get('customer_name') }}
+                                        </div>
+                                        <li class="nav-item">
+                                            <a href="{{ route('customer.logout') }}">Logout</a>
+                                        </li>
+                                    @else
+                                        <li class="nav-item">
+                                            <a href="{{ route('customer.login') }}">Sign In</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{{ route('customer.register') }}">Register</a>
+                                        </li>
+                                    @endif
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -123,20 +139,20 @@
         <div class="row align-items-center">
             <div class="col-lg-9 col-md-6 col-12">
                 <div class="nav-inner">
-
                     <div class="mega-category-menu">
                         <span class="cat-button"><i class="lni lni-menu"></i>All Categories</span>
                         <ul class="sub-category">
                             @foreach ($categories as $category)
                                 <li>
-                                    <a href="{{ route('product-category', ['id' => $category->id]) }}">{{ $category->name }}
+                                    <a href="{{ route('product-category', ['id' => $category->id]) }}">
+                                        {{ $category->name }}
                                         @if (count($category->subCategories) > 0)
                                             <i class="lni lni-chevron-right"></i>
                                         @endif
                                     </a>
                                     <ul class="{{ count($category->subCategories) > 0 ? 'inner-sub-category' : '' }}">
                                         @foreach ($category->subCategories as $subCategory)
-                                            <li><a href="product-grids.html">{{ $subCategory->name }}</a>
+                                            <li><a href="{{ route('product-sub-category', ['id' => $subCategory->id]) }}">{{ $subCategory->name }}</a>
                                             </li>
                                         @endforeach
                                     </ul>
@@ -157,13 +173,16 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul id="nav" class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a href="index.html" class="active">Home</a>
+                                    <a href="{{ route('home') }}" class="active">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a>About</a>
+                                    <a href="#">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a>Shop</a>
+                                    <a href="{{ route('all-products') }}">All Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#">Blog</a>
                                 </li>
                                 
                                 {{-- <li class="nav-item">
@@ -183,22 +202,8 @@
                                     <a href="contact.html" aria-label="Toggle navigation">Contact Us</a>
                                 </li>
                                 @if (Session::get('customer_id'))
-                                    <div class="user">
-                                        <i class="lni lni-user"></i>
-                                        Hello {{ Session::get('customer_name') }}
-                                    </div>
                                     <li class="nav-item">
                                         <a href="{{ route('customer.dashboard') }}">Dashboard</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ route('customer.logout') }}">Logout</a>
-                                    </li>
-                                @else
-                                    <li class="nav-item">
-                                        <a href="{{ route('customer.login') }}">Sign In</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ route('customer.register') }}">Register</a>
                                     </li>
                                 @endif
                             </ul>

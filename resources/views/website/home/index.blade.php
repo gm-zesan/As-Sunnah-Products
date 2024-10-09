@@ -1,7 +1,7 @@
 @extends('website.master')
 
 @section('title')
-    Online Super Shop
+    Home
 @endsection
 
 @section('body')
@@ -13,7 +13,7 @@
 
                         <div class="hero-slider">
                             <div class="single-slider"
-                                style="background-image: url({{ asset('/website') }}/assets/images/hero/slider-bg4.jpg);">
+                                style="background-image: url({{ asset('/website') }}/assets/images/hero/slider-bg1.jpg);">
                                 <div class="content">
                                     <h2><span>No restocking fee ($35 savings)</span>
                                         M75 Sport Watch
@@ -29,7 +29,7 @@
 
 
                             <div class="single-slider"
-                                style="background-image: url({{ asset('/website') }}/assets/images/hero/slider-bg5.jpg);">
+                                style="background-image: url({{ asset('/website') }}/assets/images/hero/slider-bg2.jpg);">
                                 <div class="content">
                                     <h2><span>Big Sale Offer</span>
                                         Get the Best Deal on CCTV Camera
@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                             <div class="single-slider"
-                                style="background-image: url({{ asset('/website') }}/assets/images/hero/slider-bg6.jpg);">
+                                style="background-image: url({{ asset('/website') }}/assets/images/hero/slider-bg3.jpg);">
                                 <div class="content">
                                     <h2><span>Big Sale Offer</span>
                                         Get the Best Deal on CCTV Camera
@@ -108,115 +108,23 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
-
-                    <div class="single-category">
-                        <h3 class="heading">TV & Audios</h3>
-                        <ul>
-                            <li><a href="product-grids.html">Smart Television</a></li>
-                            <li><a href="product-grids.html">QLED TV</a></li>
-                            <li><a href="product-grids.html">Audios</a></li>
-                            <li><a href="product-grids.html">Headphones</a></li>
-                            <li><a href="product-grids.html">View All</a></li>
-                        </ul>
-                        <div class="images">
-                            <img src="{{ asset('/website') }}/assets/images/featured-categories/fetured-item-1.png"
-                                alt="#">
+            <div class="row mt-5">
+                @foreach ($categories as $category)
+                    <div class="col-lg-4 col-md-6 col-12 mt-4">
+                        <div class="single-category">
+                            <h3 class="heading">{{ $category->name }}</h3>
+                            <ul>
+                                @foreach ($category->subCategories as $subCategory)
+                                    <li><a href="{{ route('product-sub-category', ['id' => $subCategory->id]) }}">{{ $subCategory->name }}</a></li>
+                                @endforeach
+                            </ul>
+                            <div class="images">
+                                <img src="{{ asset($category->image) }}"
+                                    alt="{{ $category->name }}">
+                            </div>
                         </div>
                     </div>
-
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-
-                    <div class="single-category">
-                        <h3 class="heading">Desktop & Laptop</h3>
-                        <ul>
-                            <li><a href="product-grids.html">Smart Television</a></li>
-                            <li><a href="product-grids.html">QLED TV</a></li>
-                            <li><a href="product-grids.html">Audios</a></li>
-                            <li><a href="product-grids.html">Headphones</a></li>
-                            <li><a href="product-grids.html">View All</a></li>
-                        </ul>
-                        <div class="images">
-                            <img src="{{ asset('/website') }}/assets/images/featured-categories/fetured-item-2.png"
-                                alt="#">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-
-                    <div class="single-category">
-                        <h3 class="heading">Cctv Camera</h3>
-                        <ul>
-                            <li><a href="product-grids.html">Smart Television</a></li>
-                            <li><a href="product-grids.html">QLED TV</a></li>
-                            <li><a href="product-grids.html">Audios</a></li>
-                            <li><a href="product-grids.html">Headphones</a></li>
-                            <li><a href="product-grids.html">View All</a></li>
-                        </ul>
-                        <div class="images">
-                            <img src="{{ asset('/website') }}/assets/images/featured-categories/fetured-item-3.png"
-                                alt="#">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-
-                    <div class="single-category">
-                        <h3 class="heading">Dslr Camera</h3>
-                        <ul>
-                            <li><a href="product-grids.html">Smart Television</a></li>
-                            <li><a href="product-grids.html">QLED TV</a></li>
-                            <li><a href="product-grids.html">Audios</a></li>
-                            <li><a href="product-grids.html">Headphones</a></li>
-                            <li><a href="product-grids.html">View All</a></li>
-                        </ul>
-                        <div class="images">
-                            <img src="{{ asset('/website') }}/assets/images/featured-categories/fetured-item-4.png"
-                                alt="#">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-
-                    <div class="single-category">
-                        <h3 class="heading">Smart Phones</h3>
-                        <ul>
-                            <li><a href="product-grids.html">Smart Television</a></li>
-                            <li><a href="product-grids.html">QLED TV</a></li>
-                            <li><a href="product-grids.html">Audios</a></li>
-                            <li><a href="product-grids.html">Headphones</a></li>
-                            <li><a href="product-grids.html">View All</a></li>
-                        </ul>
-                        <div class="images">
-                            <img src="{{ asset('/website') }}/assets/images/featured-categories/fetured-item-5.png"
-                                alt="#">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-
-                    <div class="single-category">
-                        <h3 class="heading">Game Console</h3>
-                        <ul>
-                            <li><a href="product-grids.html">Smart Television</a></li>
-                            <li><a href="product-grids.html">QLED TV</a></li>
-                            <li><a href="product-grids.html">Audios</a></li>
-                            <li><a href="product-grids.html">Headphones</a></li>
-                            <li><a href="product-grids.html">View All</a></li>
-                        </ul>
-                        <div class="images">
-                            <img src="{{ asset('/website') }}/assets/images/featured-categories/fetured-item-6.png"
-                                alt="#">
-                        </div>
-                    </div>
-
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -227,9 +135,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Trending Product</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered alteration in some form.</p>
+                        <h2>Latest Products</h2>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have uffered alteration in some form.</p>
                     </div>
                 </div>
             </div>
@@ -241,8 +148,12 @@
                             <div class="product-image">
                                 <img src="{{ asset($product->image) }}" alt="#">
                                 <div class="button">
-                                    <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to
-                                        Cart</a>
+                                    <form action="{{ route('add-to-cart', ['id' => $product->id]) }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="qty" class="form-control" value="1"
+                                                min="1">
+                                        <button type="submit" class="btn" style="width: 100%;"><i class="lni lni-cart"></i> Add to Cart</button>
+                                    </form>
                                 </div>
                             </div>
                             <div class="product-info">

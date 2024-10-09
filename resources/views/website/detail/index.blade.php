@@ -42,19 +42,6 @@
                                 @endforeach
                             </div>
                         </div>
-                        {{-- <div class="product-images">
-                            <main id="gallery">
-                                <div class="main-img">
-                                    <img src="{{ asset($product->image) }}" id="current" alt="#">
-                                </div>
-                                <div class="images">
-                                    @foreach ($product->otherImages as $otherImages)
-                                        <img src="{{ asset($otherImages->image) }}" class="img" alt="#">
-                                    @endforeach
-                                </div>
-                            </main>
-                        </div> --}}
-
                     </div>
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="product-info">
@@ -96,21 +83,8 @@
                                                     Cart</button>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-4 col-12">
-                                            <div class="wish-button">
-                                                <button class="btn" type="button"><i class="lni lni-reload"></i>
-                                                    Compare</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-12">
-                                            <div class="wish-button">
-                                                <button class="btn" type="button"><i class="lni lni-heart"></i> To
-                                                    Wishlist</button>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
-
                             </form>
 
                         </div>
