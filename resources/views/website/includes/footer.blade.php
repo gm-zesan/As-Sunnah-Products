@@ -31,13 +31,25 @@
                         <div class="col-lg-3 col-md-6 col-12">
 
                             <div class="single-footer f-link">
-                                <h3>Information</h3>
+                                <h3>Pages</h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">About Us</a></li>
-                                    <li><a href="javascript:void(0)">Contact Us</a></li>
-                                    <li><a href="javascript:void(0)">Downloads</a></li>
-                                    <li><a href="javascript:void(0)">Sitemap</a></li>
-                                    <li><a href="javascript:void(0)">FAQs Page</a></li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('about') }}">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('all-products') }}">All Products</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('blog') }}">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('contact') }}">Contact Us</a>
+                                    </li>
+                                    @if (Session::get('customer_id'))
+                                        <li class="nav-item">
+                                            <a href="{{ route('customer.dashboard') }}">Dashboard</a>
+                                        </li>
+                                    @endif
                                 </ul>
                             </div>
 
@@ -45,13 +57,15 @@
 
                         <div class="col-lg-3 col-md-6 col-12">
                             <div class="single-footer f-link">
-                                <h3>Shop Departments</h3>
+                                <h3>Our Categories</h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">Computers & Accessories</a></li>
-                                    <li><a href="javascript:void(0)">Smartphones & Tablets</a></li>
-                                    <li><a href="javascript:void(0)">TV, Video & Audio</a></li>
-                                    <li><a href="javascript:void(0)">Cameras, Photo & Video</a></li>
-                                    <li><a href="javascript:void(0)">Headphones</a></li>
+                                    @foreach ($categories as $category)
+                                        <li>
+                                            <a href="{{ route('product-category', ['id' => $category->id]) }}">
+                                                {{ $category->name }} 
+                                            </a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </div>
 
@@ -66,20 +80,12 @@
             <div class="container">
                 <div class="inner-content">
                     <div class="row align-items-center">
-                        <div class="col-lg-4 col-12">
-                            <div class="payment-gateway">
-                                <span>We Accept:</span>
-                                <img src="{{ asset('/website') }}/assets/images/footer/credit-cards-footer.png"
-                                    alt="#">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-12">
+                        <div class="col-md-6 col-12">
                             <div class="copyright">
-                                <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow"
-                                        target="_blank">GrayGrids</a></p>
+                                <p>Copyright &copy; 2024. Developed by<a href="https://gm-zesan.netlify.app/" rel="nofollow" target="_blank">G.M. Zesan</a></p>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-12">
+                        <div class="col-md-6 col-12">
                             <ul class="socila">
                                 <li>
                                     <span>Follow Us On:</span>

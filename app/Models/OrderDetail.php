@@ -19,6 +19,13 @@ class OrderDetail extends Model
             self::$OrderDetail->product_qty = $item->qty;
             self::$OrderDetail->save();
 
+            $product = Product::find($item->id);
+            if ($product) {
+                $product->stock_amount = $product->stock_amount - $item->qty;
+                $product->sales_count += $item->qty;
+                $product->save();
+            }
+
             ShoppingCart::remove($item->__raw_id);
         }
     }

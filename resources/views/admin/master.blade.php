@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/admin') }}/assets/images/favicon.png">
-    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <title>As Sunnah Products</title>
     <!-- This page CSS -->
     <!-- chartist CSS -->
     <link href="{{ asset('/admin') }}/assets/node_modules/morrisjs/morris.css" rel="stylesheet">
@@ -52,48 +52,26 @@
             <p class="loader__label">Elite admin</p>
         </div>
     </div>
-    <!-- Main wrapper - style you can find in pages.scss -->
     <div id="main-wrapper">
-        <!-- Topbar header - style you can find in pages.scss -->
         @include('admin.includes.header')
-        <!-- End Topbar header -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
         @include('admin.includes.sidebar')
-        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- Page wrapper  -->
         <div class="page-wrapper">
-            <!-- Container fluid  -->
             <div class="container-fluid">
                 @yield('body')
             </div>
-            <!-- End Container fluid  -->
         </div>
-        <!-- End Page wrapper  -->
 
-        <!-- footer -->
         <footer class="footer">
-            © {{ date('Y - m - d') }} Design & Develop by
-            <a href="https://portfolio-1a90c.web.app/">G.M.Zesan</a>
+            © {{ date('Y - m - d') }}Develop by
+            <a href="https://gm-zesan.netlify.app/">G.M.Zesan</a>
         </footer>
-        <!-- End footer -->
     </div>
-    <!-- End Wrapper -->
-    <!-- All Jquery -->
     <script src="{{ asset('/admin') }}/assets/node_modules/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
     <script src="{{ asset('/admin') }}/assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
     <script src="{{ asset('/admin') }}/dist/js/perfect-scrollbar.jquery.min.js"></script>
-    <!--Wave Effects -->
     <script src="{{ asset('/admin') }}/dist/js/waves.js"></script>
-    <!--Menu sidebar -->
     <script src="{{ asset('/admin') }}/dist/js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
     <script src="{{ asset('/admin') }}/dist/js/custom.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugins -->
-    <!-- ============================================================== -->
-    <!--morris JavaScript -->
     <script src="{{ asset('/admin') }}/assets/node_modules/raphael/raphael-min.js"></script>
     <script src="{{ asset('/admin') }}/assets/node_modules/morrisjs/morris.min.js"></script>
     <script src="{{ asset('/admin') }}/assets/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>

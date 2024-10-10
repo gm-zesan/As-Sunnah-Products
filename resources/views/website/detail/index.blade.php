@@ -5,26 +5,6 @@
 @endsection
 
 @section('body')
-    <div class="breadcrumbs">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="breadcrumbs-content">
-                        <h1 class="page-title">Single Product</h1>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <ul class="breadcrumb-nav">
-                        <li><a href="index.html"><i class="lni lni-home"></i> Home</a></li>
-                        <li><a href="index.html">Shop</a></li>
-                        <li>Single Product</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <section class="item-details section">
         <div class="container">
             <div class="top-area">
@@ -102,7 +82,54 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2>Related Products</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @foreach ($products as $product)
+                        <div class="col-lg-3 col-md-6 col-12">
+    
+                            <div class="single-product">
+                                <div class="product-image">
+                                    <img src="{{ asset($product->image) }}" alt="#">
+                                    <div class="button">
+                                        <form action="{{ route('add-to-cart', ['id' => $product->id]) }}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="qty" class="form-control" value="1"
+                                                    min="1">
+                                            <button type="submit" class="btn" style="width: 100%;"><i class="lni lni-cart"></i> Add to Cart</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <span class="category">{{ $product->category->name }}</span>
+                                    <h4 class="title">
+                                        <a
+                                            href="{{ route('product-detail', ['id' => $product->id]) }}">{{ $product->name }}</a>
+                                    </h4>
+                                    <ul class="review">
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star"></i></li>
+                                        <li><span>4.0 Review(s)</span></li>
+                                    </ul>
+                                    <div class="price">
+                                        <span>{{ $product->selling_price }}</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    @endforeach
+                </div>
+                {{-- <div class="row">
                     <div class="col-lg-4 col-12">
                         <div class="single-block give-review">
                             <h4>4.5 (Overall)</h4>
@@ -222,7 +249,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
@@ -238,27 +265,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="review-name">Your Name</label>
-                                <input class="form-control" type="text" id="review-name" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="review-email">Your Email</label>
-                                <input class="form-control" type="email" id="review-email" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="review-subject">Subject</label>
-                                <input class="form-control" type="text" id="review-subject" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
+                        <div class="col-12">
                             <div class="form-group">
                                 <label for="review-rating">Rating</label>
                                 <select class="form-control" id="review-rating">

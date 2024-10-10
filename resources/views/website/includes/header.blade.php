@@ -65,45 +65,52 @@
                             <div class="cart-items">
                                 <a href="javascript:void(0)" class="main-btn">
                                     <i class="lni lni-cart"></i>
-                                    <span class="total-items">{{ count(ShoppingCart::all()) }}</span>
+                                    @php
+                                        $count = count(ShoppingCart::all());
+                                    @endphp
+                                    @if($count > 0)
+                                        <span class="total-items">{{ $count }}</span>
+                                    @endif
                                 </a>
 
-                                <div class="shopping-item">
-                                    <div class="dropdown-cart-header">
-                                        <span>{{ count(ShoppingCart::all()) }} Items</span>
-                                        <a href="{{ route('show-cart') }}">View Cart</a>
-                                    </div>
-                                    <ul class="shopping-list">
-                                        @php($sum = 0)
-                                        @foreach (ShoppingCart::all() as $item)
-                                            <li>
-                                                <a href="javascript:void(0)" class="remove" title="Remove this item"><i
-                                                        class="lni lni-close"></i></a>
-                                                <div class="cart-img-head">
-                                                    <a class="cart-img" href="product-details.html"><img
-                                                            src="{{ asset($item->image) }}"
-                                                            alt="{{ $item->name }}"></a>
-                                                </div>
-                                                <div class="content">
-                                                    <h4><a href="product-details.html">
-                                                            {{ $item->name }}</a></h4>
-                                                    <p class="quantity">{{ $item->qty }}x - <span
-                                                            class="amount">{{ $item->price }}</span></p>
-                                                </div>
-                                            </li>
-                                            @php($sum += $item->price * $item->qty)
-                                        @endforeach
-                                    </ul>
-                                    <div class="bottom">
-                                        <div class="total">
-                                            <span>Total</span>
-                                            <span class="total-amount">{{ $sum }}</span>
+                                @if($count > 0)
+                                    <div class="shopping-item">
+                                        <div class="dropdown-cart-header">
+                                            <span>{{ count(ShoppingCart::all()) }} Items</span>
+                                            <a href="{{ route('show-cart') }}">View Cart</a>
                                         </div>
-                                        <div class="button">
-                                            <a href="{{ route('checkout') }}" class="btn animate">Checkout</a>
+                                        <ul class="shopping-list">
+                                            @php($sum = 0)
+                                            @foreach (ShoppingCart::all() as $item)
+                                                <li>
+                                                    <a href="{{ route('remove-cart-product', ['id' => $item->__raw_id]) }}" class="remove" title="Remove this item"><i
+                                                            class="lni lni-close"></i></a>
+                                                    <div class="cart-img-head">
+                                                        <a class="cart-img" href="product-details.html"><img
+                                                                src="{{ asset($item->image) }}"
+                                                                alt="{{ $item->name }}"></a>
+                                                    </div>
+                                                    <div class="content">
+                                                        <h4><a href="{{ route('product-detail', ['id' => $item->id]) }}">
+                                                                {{ $item->name }}</a></h4>
+                                                        <p class="quantity">{{ $item->qty }}x - <span
+                                                                class="amount">{{ $item->price }}</span></p>
+                                                    </div>
+                                                </li>
+                                                @php($sum += $item->price * $item->qty)
+                                            @endforeach
+                                        </ul>
+                                        <div class="bottom">
+                                            <div class="total">
+                                                <span>Total</span>
+                                                <span class="total-amount">{{ $sum }}</span>
+                                            </div>
+                                            <div class="button">
+                                                <a href="{{ route('checkout') }}" class="btn animate">Checkout</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endif
 
                             </div>
 
@@ -173,16 +180,16 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul id="nav" class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a href="{{ route('home') }}" class="active">Home</a>
+                                    <a href="{{ route('home') }}" class="{{ Route::currentRouteName() == 'home' ? 'active' : '' }}">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#">About</a>
+                                    <a href="{{ route('about') }}" class="{{ Route::currentRouteName() == 'about' ? 'active' : '' }}">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('all-products') }}">All Products</a>
+                                    <a href="{{ route('all-products') }}" class="{{ Route::currentRouteName() == 'all-products' ? 'active' : '' }}">All Products</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#">Blog</a>
+                                    <a href="{{ route('blog') }}" class="{{ Route::currentRouteName() == 'blog' ? 'active' : '' }}">Blog</a>
                                 </li>
                                 
                                 {{-- <li class="nav-item">
@@ -199,11 +206,11 @@
                                     </ul>
                                 </li> --}}
                                 <li class="nav-item">
-                                    <a href="contact.html" aria-label="Toggle navigation">Contact Us</a>
+                                    <a href="{{ route('contact') }}" class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}">Contact Us</a>
                                 </li>
                                 @if (Session::get('customer_id'))
                                     <li class="nav-item">
-                                        <a href="{{ route('customer.dashboard') }}">Dashboard</a>
+                                        <a href="{{ route('customer.dashboard') }}" class="{{ Route::currentRouteName() == 'customer.dashboard' ? 'active' : '' }}">Dashboard</a>
                                     </li>
                                 @endif
                             </ul>

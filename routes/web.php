@@ -1,30 +1,22 @@
 <?php
 
-use App\Http\Controllers\BrandController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\UnitController;
+use App\Http\Controllers\BrandController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminOrderController;
+use App\Http\Controllers\MyCommerceController;
+use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\SubCategoryController;
+use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\CustomerAuthController;
 use App\Http\Controllers\CustomerOrderController;
 use App\Http\Controllers\SslCommerzPaymentController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\MyCommerceController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\SubCategoryController;
-use App\Http\Controllers\UnitController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminOrderController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 
 
@@ -33,6 +25,11 @@ Route::get('/all-products', [MyCommerceController::class, 'allProducts'])->name(
 Route::get('/product-category/{id}', [MyCommerceController::class, 'category'])->name('product-category');
 Route::get('/product-sub-category/{id}', [MyCommerceController::class, 'subCategory'])->name('product-sub-category');
 Route::get('/product-detail/{id}', [MyCommerceController::class, 'detail'])->name('product-detail');
+Route::get('/about', [MyCommerceController::class, 'about'])->name('about');
+Route::get('/contact', [MyCommerceController::class, 'contact'])->name('contact');
+Route::post('/contact/store', [ContactFormController::class, 'store'])->name('contact.message.store');
+Route::get('/blog', [MyCommerceController::class, 'blog'])->name('blog');
+Route::get('/blog-detail/{id}', [MyCommerceController::class, 'blogDetail'])->name('blog-detail');
 
 
 Route::post('/add-to-cart/{id}', [CartController::class, 'index'])->name('add-to-cart');
@@ -94,17 +91,12 @@ Route::middleware([
     Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
 
 
-
-
     Route::get('/category/add', [CategoryController::class, 'index'])->name('category.add');
     Route::get('/category/manage', [CategoryController::class, 'manage'])->name('category.manage');
     Route::post('/category/new',[CategoryController::class, 'create'])->name('category.new');
     Route::get('/category/edit/{id}',[CategoryController::class, 'edit'])->name('category.edit'); 
     Route::post('/category/update/{id}',[CategoryController::class, 'update'])->name('category.update'); 
     Route::get('/category/delete/{id}',[CategoryController::class, 'delete'])->name('category.delete');
-
-
-
 
 
     Route::get('/sub-category/add', [SubCategoryController::class, 'index'])->name('sub-category.add');
@@ -122,7 +114,6 @@ Route::middleware([
     Route::get('/brand/edit/{id}',[BrandController::class, 'edit'])->name('brand.edit'); 
     Route::post('/brand/update/{id}',[BrandController::class, 'update'])->name('brand.update'); 
     Route::get('/brand/delete/{id}',[BrandController::class, 'delete'])->name('brand.delete');
-
 
 
     Route::get('/unit/add', [UnitController::class, 'index'])->name('unit.add');
@@ -152,4 +143,27 @@ Route::middleware([
     Route::get('/admin/order-invoice/{id}',[AdminOrderController::class, 'showInvoice'])->name('admin.order-invoice');
     Route::get('/admin/print-invoice/{id}',[AdminOrderController::class, 'printInvoice'])->name('admin.print-invoice');
     Route::get('/admin/order-delete/{id}',[AdminOrderController::class, 'delete'])->name('admin.order-delete');
+
+    // Blog Category Route
+    Route::get('/admin/blog-category', [BlogCategoryController::class,'index'])->name('blog-category');
+    Route::get('/admin/blog-category/create', [BlogCategoryController::class,'create'])->name('blog-category.create');
+    Route::post('/admin/blog-category/store', [BlogCategoryController::class,'store'])->name('blog-category.store');
+    Route::get('/admin/blog-category/edit/{id}', [BlogCategoryController::class,'edit'])->name('blog-category.edit');
+    Route::post('/admin/blog-category/update/{id}', [BlogCategoryController::class,'update'])->name('blog-category.update');
+    Route::get('/admin/blog-category/delete/{id}', [BlogCategoryController::class,'delete'])->name('blog-category.delete');
+
+
+    // BLog Route
+    Route::get('/admin/blogs', [BlogController::class,'index'])->name('blogs');
+    Route::get('/admin/blog/create', [BlogController::class,'create'])->name('blog.create');
+    Route::post('/admin/blog/store', [BlogController::class,'store'])->name('blog.store');
+    Route::get('/admin/blog/edit/{id}', [BlogController::class,'edit'])->name('blog.edit');
+    Route::post('/admin/blog/update/{id}', [BlogController::class,'update'])->name('blog.update');
+    Route::get('/admin/blog/delete/{id}', [BlogController::class,'delete'])->name('blog.delete');
+
+    //message Route
+    Route::get('/admin/message', [ContactFormController::class,'index'])->name('message');
+    Route::get('/admin/message/read/', [ContactFormController::class, 'read'])->name('message.read');
+    Route::get('/admin/message/important/', [ContactFormController::class, 'important'])->name('message.important');
+    Route::get('/admin/message/delete/{id}', [ContactFormController::class,'delete'])->name('message.delete');
 });

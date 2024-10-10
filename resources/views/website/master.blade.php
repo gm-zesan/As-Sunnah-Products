@@ -11,6 +11,8 @@
     @yield('body')
     @include('website.includes.footer')
     @include('website.includes.script')
+
+    @stack('scripts')
 </body>
 
 </html>

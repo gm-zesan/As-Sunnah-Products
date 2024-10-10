@@ -42,7 +42,6 @@ class CheckoutController extends Controller
             Session::put('customer_id', $this->customer->id);
             Session::put('customer_name', $this->customer->name);
         }
-
         $this->order = Order::newOrder($request, $this->customer->id);
         OrderDetail::newOrderDetail($this->order->id);
         return redirect('/complete-order')->with('message', 'Order placed successfully');

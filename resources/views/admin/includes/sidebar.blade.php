@@ -1,7 +1,5 @@
 <aside class="left-sidebar">
-    <!-- Sidebar scroll-->
     <div class="scroll-sidebar">
-        <!-- Sidebar navigation-->
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
                 <li>
@@ -65,38 +63,47 @@
                         <li><a href="{{ route('admin.all-order') }}">Manage Order</a></li>
                     </ul>
                 </li>
+
+                <li> 
+                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                        <i class="ti-palette"></i>
+                        <span class="hide-menu">BlogCategory</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="{{ route('blog-category.create') }}">Add BlogCategory</a></li>
+                        <li><a href="{{ route('blog-category') }}">Manage BlogCategory</a></li>
+                    </ul>
+                </li>
+                <li> 
+                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                        <i class="ti-palette"></i>
+                        <span class="hide-menu">Blog Module</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="{{ route('blog.create') }}">Add Blog</a></li>
+                        <li><a href="{{ route('blogs') }}">Manage Blog</a></li>
+                    </ul>
+                </li>
+                <li> 
+                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                        <i class="ti-palette"></i>
+                        <span class="hide-menu">Contact Modul</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="{{ route('message') }}">Manage Contact</a></li>
+                    </ul>
+                </li>
+
+
+
                 <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
                             class="ti-gallery"></i><span class="hide-menu">Customer
                             Module</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="layout-single-column.html">Manage Customer</a></li>
+                        <li><a href="#">Manage Customer</a></li>
                     </ul>
                 </li>
-                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
-                            class="ti-files"></i><span class="hide-menu">User Module
-                        </span></a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li><a href="starter-kit.html">Add User</a></li>
-                        <li><a href="pages-blank.html">Manage User</a></li>
-                    </ul>
-                </li>
-                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
-                            class="ti-pie-chart"></i><span class="hide-menu">Coupon
-                            Module</span></a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li><a href="chart-morris.html">Add Coupon</a></li>
-                        <li><a href="chart-chartist.html">Manage Coupon</a></li>
-                    </ul>
-                </li>
-                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
-                            class="ti-light-bulb"></i><span class="hide-menu">Setting
-                            Module</span></a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li><a href="icon-material.html">Company Setting</a></li>
-                        <li><a href="icon-fontawesome.html">Tax Setting</a></li>
-                        <li><a href="icon-themify.html">Shipping Setting</a></li>
-                    </ul>
-                </li>
+                
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

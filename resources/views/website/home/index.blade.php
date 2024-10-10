@@ -42,21 +42,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="single-slider"
-                                style="background-image: url({{ asset('/website') }}/assets/images/hero/slider-bg3.jpg);">
-                                <div class="content">
-                                    <h2><span>Big Sale Offer</span>
-                                        Get the Best Deal on CCTV Camera
-                                    </h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut
-                                        labore dolore magna aliqua.</p>
-                                    <h3><span>Combo Only:</span> $590.00</h3>
-                                    <div class="button">
-                                        <a href="product-grids.html" class="btn">Shop Now</a>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
 
                     </div>
@@ -702,7 +687,7 @@
                         <i class="lni lni-credit-cards"></i>
                     </div>
                     <div class="media-body">
-                        <h5>Online Payment.</h5>
+                        <h5>Cash on Delivery.</h5>
                         <span>Secure Payment Services.</span>
                     </div>
                 </li>

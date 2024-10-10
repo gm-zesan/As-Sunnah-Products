@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer(['website.includes.header', 'website.products.index'], function ($view) {
+        View::composer(['website.includes.header', 'website.includes.footer', 'website.products.index'], function ($view) {
             $view->with('categories', Category::withCount('products')->get());
         });
     }
